@@ -189,8 +189,21 @@ function showPhoto(event) {
 }
 
 function orderNow() {
+  const phone = "91XXXXXXXXXX";
 
-  alert("बहुत बढ़िया! अगले चरण में यहाँ Customer Address आएगा।");
+  const message =
+    "🖼️ NAP Frames में नया ऑर्डर\n\n" +
+    "Frame: Beautiful Photo Frame\n" +
+    "Size: 12 × 18\n" +
+    "Price: ₹660\n\n" +
+    "कृपया ग्राहक की जानकारी और फोटो भेजें।";
+
+  const url =
+    "https://wa.me/" + phone +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
 
 }
 
